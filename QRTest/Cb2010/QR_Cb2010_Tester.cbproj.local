@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021-03-10 14:04:06.611.cpp,C:\Documents and Settings\Administrator\My Documents\RAD Studio\Projects\Unit2.cpp=C:\Project\QRLib\QRTest\Cb2010\MainUI.cpp</Transaction>
+    <Transaction>2021-03-10 14:04:06.611.h,C:\Documents and Settings\Administrator\My Documents\RAD Studio\Projects\Unit2.h=C:\Project\QRLib\QRTest\Cb2010\MainUI.h</Transaction>
+    <Transaction>2021-03-10 14:04:06.611.dfm,C:\Documents and Settings\Administrator\My Documents\RAD Studio\Projects\Unit2.dfm=C:\Project\QRLib\QRTest\Cb2010\MainUI.dfm</Transaction>
+    <Transaction>2021-03-10 14:04:41.521.cbproj,C:\Documents and Settings\Administrator\My Documents\RAD Studio\Projects\Project2.cbproj=C:\Project\QRLib\QRTest\Cb2010\QR_Cb2010_Tester.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>

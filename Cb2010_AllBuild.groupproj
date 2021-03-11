@@ -1,0 +1,72 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{818AF00B-1DFD-468B-8506-BBEFFD2AD649}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="QRTest\Cb2010\QR_Cb2010_Tester.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Zint\Zint.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Zint\Dependencies\Zlib\Zlib.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Zint\Dependencies\Libpng\Libpng.cbproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="QR_Cb2010_Tester">
+			<MSBuild Projects="QRTest\Cb2010\QR_Cb2010_Tester.cbproj"/>
+		</Target>
+		<Target Name="QR_Cb2010_Tester:Clean">
+			<MSBuild Targets="Clean" Projects="QRTest\Cb2010\QR_Cb2010_Tester.cbproj"/>
+		</Target>
+		<Target Name="QR_Cb2010_Tester:Make">
+			<MSBuild Targets="Make" Projects="QRTest\Cb2010\QR_Cb2010_Tester.cbproj"/>
+		</Target>
+		<Target Name="Zint">
+			<MSBuild Projects="Zint\Zint.cbproj"/>
+		</Target>
+		<Target Name="Zint:Clean">
+			<MSBuild Targets="Clean" Projects="Zint\Zint.cbproj"/>
+		</Target>
+		<Target Name="Zint:Make">
+			<MSBuild Targets="Make" Projects="Zint\Zint.cbproj"/>
+		</Target>
+		<Target Name="Zlib">
+			<MSBuild Projects="Zint\Dependencies\Zlib\Zlib.cbproj"/>
+		</Target>
+		<Target Name="Zlib:Clean">
+			<MSBuild Targets="Clean" Projects="Zint\Dependencies\Zlib\Zlib.cbproj"/>
+		</Target>
+		<Target Name="Zlib:Make">
+			<MSBuild Targets="Make" Projects="Zint\Dependencies\Zlib\Zlib.cbproj"/>
+		</Target>
+		<Target Name="Libpng">
+			<MSBuild Projects="Zint\Dependencies\Libpng\Libpng.cbproj"/>
+		</Target>
+		<Target Name="Libpng:Clean">
+			<MSBuild Targets="Clean" Projects="Zint\Dependencies\Libpng\Libpng.cbproj"/>
+		</Target>
+		<Target Name="Libpng:Make">
+			<MSBuild Targets="Make" Projects="Zint\Dependencies\Libpng\Libpng.cbproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="QR_Cb2010_Tester;Zint;Zlib;Libpng"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="QR_Cb2010_Tester:Clean;Zint:Clean;Zlib:Clean;Libpng:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="QR_Cb2010_Tester:Make;Zint:Make;Zlib:Make;Libpng:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>
